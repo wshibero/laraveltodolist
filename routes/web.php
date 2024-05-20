@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ItemController;
 
 /*
 |--------------------------------------------------------------------------
@@ -25,4 +26,4 @@ Route::get('/about', function(){
     return view('about');
 });
 
-Route::get('/all/items', 'ItemController@view_all_data');
+Route::get('/all/items', [ItemController::class,'view_all_data']);
