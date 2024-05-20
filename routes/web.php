@@ -24,3 +24,5 @@ Route::get('/', function(){
 Route::get('/about', function(){
     return view('about');
 });
+
+Route::get('/all/items', 'ItemController@view_all_data');
