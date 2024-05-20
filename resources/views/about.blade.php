@@ -1,7 +1,7 @@
 <!doctype html>
 <html>
   <head>
-    <title>The Homepage</title>
+    <title>The Aboutpage</title>
   </head>
   <body>
     <div>
@@ -14,7 +14,7 @@
       </table>
     </div>
     <div>
-      <p>This is the HomePage</p>
+      <p>This is the About Page</p>
     </div>
   </body>
 </html>
