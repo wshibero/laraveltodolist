@@ -2,6 +2,7 @@
 <html>
   <head>
     @include('includes.head')
+    <link rel="stylesheet" href="{{ asset('public/css/styles.css') }}"/>
   </head>
   <body>
     <header>
