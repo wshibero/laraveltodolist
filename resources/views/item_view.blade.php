@@ -19,11 +19,15 @@
          <tr>
             <td>ID</td>
             <td>Activity</td>
+            <td>Description</td>
+            <td>Completed</td>
          </tr>
          @foreach ($items as $item)
          <tr>
             <td>{{ $item->id }}</td>
             <td>{{ $item->activity }}</td>
+            <td>{{ $item->description }}</td>
+            <td>{{ $item->complete }}</td>
          </tr>
          @endforeach
       </table>
