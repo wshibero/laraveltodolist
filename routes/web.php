@@ -27,3 +27,5 @@ Route::get('/about', function(){
 });
 
 Route::get('/all/items', [ItemController::class,'view_all_data']);
+
+Route::get('/item/create form', [ItemController::class,'insertform']);

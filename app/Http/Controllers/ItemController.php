@@ -14,4 +14,7 @@ class ItemController extends Controller
         $items = DB::select('select * from items');
         return view('item_view',['items'=>$items]);
     }
+    public function insertform(){
+        return view('insert_form');
+    }
 }
