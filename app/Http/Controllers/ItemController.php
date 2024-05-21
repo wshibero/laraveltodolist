@@ -12,10 +12,10 @@ class ItemController extends Controller
     //
     public function view_all_data(){
         $items = DB::select('select * from items');
-        return view('item_view',['items'=>$items]);
+        return view('pages.item_view',['items'=>$items]);
     }
     public function insertform(){
-        return view('insert_form');
+        return view('pages.insert_form');
     }
     public function insert_data(Request $request){
         $activity = $request->input('activity');
@@ -26,7 +26,7 @@ class ItemController extends Controller
     }
     public function update_data_form($id){
         $item = DB::table('items')->where('id',$id)->first();
-        return view('update_form',['item'=>$item]);
+        return view('pages.update_form',['item'=>$item]);
     }
     public function update_data(Request $request, $id){
         $activity = $request->input('activity');

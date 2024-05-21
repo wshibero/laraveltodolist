@@ -5,15 +5,15 @@ use App\Http\Controllers\ItemController;
 
 
 Route::get('/welcome php', function () {
-    return view('welcome');
+    return view('pages.welcome');
 });
 
 Route::get('/', function(){
-    return view('home');
+    return view('pages.home');
 });
 
 Route::get('/about', function(){
-    return view('about');
+    return view('pages.about');
 });
 
 Route::get('/all/items', [ItemController::class,'view_all_data']);
