@@ -24,4 +24,8 @@ class ItemController extends Controller
         DB::insert('insert into items (activity,description,complete) values (?,?,?)',[$activity,$description,$complete]);
         return redirect('/all/items');
     }
+    public function update_data_form($id){
+        $item = DB::table('items')->where('id',$id)->first();
+        return view('update_form',['item'=>$item]);
+    }
 }

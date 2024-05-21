@@ -1,5 +1,4 @@
 <html>
-
    <head>
       <title>View Student Records</title>
    </head>
@@ -25,7 +24,7 @@
          </tr>
          @foreach ($items as $item)
          <tr>
-            <td>{{ $item->id }}</td>
+            <td><a href="/item/update form/{{ $item->id }}">{{ $item->id }}</a></td>
             <td>{{ $item->activity }}</td>
             <td>{{ $item->description }}</td>
             <td>{{ $item->complete }}</td>
