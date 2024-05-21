@@ -23,3 +23,7 @@ Route::get('/item/create form', [ItemController::class,'insertform']);
 Route::post('/item/create form/new', [ItemController::class,'insert_data']);
 
 Route::get('/item/update form/{id}', [ItemController::class,'update_data_form']);
+
+Route::post('/item/update form/{id}/edit', [ItemController::class,'update_data']);
+
+Route::get('/item/completed/{id}', [ItemController::class,'completed_task']);

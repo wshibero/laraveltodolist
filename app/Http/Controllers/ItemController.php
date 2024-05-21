@@ -28,4 +28,14 @@ class ItemController extends Controller
         $item = DB::table('items')->where('id',$id)->first();
         return view('update_form',['item'=>$item]);
     }
+    public function update_data(Request $request, $id){
+        $activity = $request->input('activity');
+        $description = $request->input('description');
+        DB::update('update items set activity=?,description=? where id=?',[$activity,$description,$id]);
+        return redirect('/all/items');
+    }
+    public function completed_task($id){
+        DB::update('update items set complete="complete" where id=?',[$id]);
+        return redirect('/all/items');
+    }
 }

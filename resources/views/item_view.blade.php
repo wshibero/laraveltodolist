@@ -27,7 +27,7 @@
             <td><a href="/item/update form/{{ $item->id }}">{{ $item->id }}</a></td>
             <td>{{ $item->activity }}</td>
             <td>{{ $item->description }}</td>
-            <td>{{ $item->complete }}</td>
+            <td><a href="/item/completed/{{$item->id}}">{{ $item->complete }}</a></td>
          </tr>
          @endforeach
       </table>
