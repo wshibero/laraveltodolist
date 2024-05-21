@@ -2,7 +2,7 @@
 <html>
   <head>
     @include('includes.head')
-    <link rel="stylesheet" href="{{ asset('public/css/styles.css') }}"/>
+    <link rel="stylesheet" href="{{ secure_asset('css/styles.css') }}"/>
   </head>
   <body>
     <header>
