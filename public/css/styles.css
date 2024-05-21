@@ -1,5 +1,6 @@
 body{
   background-color: beige;
+  font-family: 	Arial, Helvetica, sans-serif;
 }
 
 main{
@@ -13,13 +14,29 @@ main{
   border: solid #1ac5db;
 }
 
+#active:hover{
+  backgroud-color: rgb(8, 232, 222);
+}
+
 .menu-item{
   padding: 4px;
+  text-align: center;
+}
+
+.menu-item:hover{
+  background-color: rgb( 125, 249, 255);
+}
+
+.menu-item>a:hover{
+  color: black;
+  text-decoration: underline;
 }
 
 .menu-item>a{
   text-decoration: none;
   color: white;
+  text-transform: uppercase;
+  font-weight: bold;
 }
 
 .navbar{
@@ -32,6 +49,7 @@ main{
 
 input, textarea, label{
   width: 100%;
+  font-size: 16px;
 }
 
 header{
@@ -49,6 +67,12 @@ input[type=text], textarea, select{
   padding: 7px;
 }
 
+label{
+  text-align: center;
+  text-align: capitalize;
+  font-weight: bold;
+}
+
 textarea{
   min-height: 100px;
   border: none;
@@ -60,7 +84,14 @@ textarea:hover, input[type=text]:hover, select:hover, option:hover{
 }
 
 textarea:focus, input[type=text]:focus, select:hover{
-  
+  outline-color: rgb(0, 255, 239);
+  border: solid 2px rgb(0, 255, 239);
+  border-radius: 5px;
+}
+
+input[type=text]{
+  border: none;
+  border-bottom: solid 2px #333333;
 }
 
 form{
@@ -85,8 +116,14 @@ input[type=submit]:hover{
 
 select{
   width: 100%;
+  border: solid 1px #333333;
+  border-radius: 6px;
 }
 
 option{
   padding: 6px;
+}
+
+.data-table{
+  border-collapse: collapse;
 }

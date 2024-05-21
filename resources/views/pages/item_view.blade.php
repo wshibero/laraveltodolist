@@ -2,24 +2,24 @@
 
 @section('content')
 
-      <table border = 1>
+      <table class="data-table">
          <thead>
             <tr>
-               <th>ID</th>
-               <th>Activity</th>
-               <th>Description</th>
-               <th>Completed</th>
-               <th></th>
+               <th class="data-table-items">ID</th>
+               <th class="data-table-items">Activity</th>
+               <th class="data-table-items">Description</th>
+               <th class="data-table-items">Completed</th>
+               <th class="data-table-items"></th>
             </tr>
          </thead>
          <tbody>
             @foreach ($items as $item)
             <tr>
-               <td>{{ $item->id }}</a></td>
-               <td>{{ $item->activity }}</td>
-               <td>{{ $item->description }}</td>
-               <td><a href="/item/completed/{{$item->id}}">{{ $item->complete }}</a></td>
-               <td><button><a href="/item/update form/{{ $item->id }}">Edit</a></button><button><a href="/item/delete/{{$item->id}}">Delete</a></button</td>
+               <td class="data-table-items">{{ $item->id }}</a></td>
+               <td class="data-table-items">{{ $item->activity }}</td>
+               <td class="data-table-items">{{ $item->description }}</td>
+               <td class="data-table-items"><a href="/item/completed/{{$item->id}}">{{ $item->complete }}</a></td>
+               <td class="data-table-items"><button><a href="/item/update form/{{ $item->id }}">Edit</a></button><button><a href="/item/delete/{{$item->id}}">Delete</a></button</td>
             </tr>
             @endforeach
          </tbody>
