@@ -35,7 +35,12 @@ class ItemController extends Controller
         return redirect('/all/items');
     }
     public function completed_task($id){
-        DB::update('update items set complete="complete" where id=?',[$id]);
+        $complete = "complete";
+        DB::update('update items set complete=? where id=?',[$complete, $id]);
+        return redirect('/all/items');
+    }
+    public function delete_record($id){
+        DB::delete('delete from items where id=?',[$id]);
         return redirect('/all/items');
     }
 }

@@ -16,20 +16,26 @@
          </table>
       </div>
       <table border = 1>
-         <tr>
-            <td>ID</td>
-            <td>Activity</td>
-            <td>Description</td>
-            <td>Completed</td>
-         </tr>
-         @foreach ($items as $item)
-         <tr>
-            <td><a href="/item/update form/{{ $item->id }}">{{ $item->id }}</a></td>
-            <td>{{ $item->activity }}</td>
-            <td>{{ $item->description }}</td>
-            <td><a href="/item/completed/{{$item->id}}">{{ $item->complete }}</a></td>
-         </tr>
-         @endforeach
+         <thead>
+            <tr>
+               <th>ID</th>
+               <th>Activity</th>
+               <th>Description</th>
+               <th>Completed</th>
+               <th></th>
+            </tr>
+         </thead>
+         <tbody>
+            @foreach ($items as $item)
+            <tr>
+               <td>{{ $item->id }}</a></td>
+               <td>{{ $item->activity }}</td>
+               <td>{{ $item->description }}</td>
+               <td><a href="/item/completed/{{$item->id}}">{{ $item->complete }}</a></td>
+               <td><button><a href="/item/update form/{{ $item->id }}">Edit</a></button><button><a href="/item/delete/{{$item->id}}">Delete</a></button</td>
+            </tr>
+            @endforeach
+         </tbody>
       </table>
    </body>
 </html>

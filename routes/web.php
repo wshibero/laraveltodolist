@@ -27,3 +27,5 @@ Route::get('/item/update form/{id}', [ItemController::class,'update_data_form'])
 Route::post('/item/update form/{id}/edit', [ItemController::class,'update_data']);
 
 Route::get('/item/completed/{id}', [ItemController::class,'completed_task']);
+
+Route::get('/item/delete/{id}', [ItemController::class,'delete_record']);
