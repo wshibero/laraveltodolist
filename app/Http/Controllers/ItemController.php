@@ -17,4 +17,11 @@ class ItemController extends Controller
     public function insertform(){
         return view('insert_form');
     }
+    public function insert_data(Request $request){
+        $activity = $request->input('activity');
+        $description = $request->input('description');
+        $complete = $request->input('complete');
+        DB::insert('insert into items (activity,description,complete) values (?,?,?)',[$activity,$description,$complete]);
+        return redirect('/all/items');
+    }
 }
